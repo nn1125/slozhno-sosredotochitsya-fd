@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .find((cn) => cn.startsWith('theme-'))
     ?.replace('theme-', '');
   const themeButtons = [
-    ...document.querySelectorAll('.header__theme-menu-button'),
+    ...document.querySelectorAll('.header_theme-menu-button'),
   ];
   setActiveButton(themeButtons, currentTheme);
 
@@ -33,20 +33,20 @@ function setTheme(theme) {
 
 function setActiveButton(buttonsArray, theme) {
   buttonsArray.forEach((button) => {
-    button.classList.remove('header__theme-menu-button_active');
+    button.classList.remove('header_theme-menu-button_active');
     button.removeAttribute('disabled');
   });
   const target = buttonsArray.find((button) =>
-    button.classList.contains(`header__theme-menu-button_type_${theme}`)
+    button.classList.contains(`header_theme-menu-button_type_${theme}`)
   );
   if (target) {
-    target.classList.add('header__theme-menu-button_active');
+    target.classList.add('header_theme-menu-button_active');
     target.setAttribute('disabled', true);
   } else {
     const autoButton = document.querySelector(
-      '.header__theme-menu-button_type_auto'
+      '.header_theme-menu-button_type_auto'
     );
-    autoButton.classList.add('header__theme-menu-button_active');
+    autoButton.classList.add('header_theme-menu-button_active');
     autoButton.setAttribute('disabled', true);
   }
 }
