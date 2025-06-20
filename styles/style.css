@@ -2,13 +2,13 @@
   font-family: var(--font-family, 'IBM Plex mono' monospace);
   background-color: var(--bg-color);
   background-attachment: fixed;
-}
-.header {
-  padding: 10px;
   background-image: var(--bg-image, url("../images/cover-image.png"));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.header {
+  padding: 10px;
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -56,7 +56,7 @@
   text-transform: uppercase;
   color: var(--color-accent, #FF0070);
 }
-.header_title {
+.main_title {
   color: var(--color-title, #DB00FF);
   text-shadow: 4px 4px var(--color-shadow-second, #FF0070);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -108,6 +108,7 @@
 }
 .list {
   display: grid;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .title {
@@ -125,17 +126,16 @@
   color: var(--color-text, #F1B2CE);
   font-size:18px;
 }
-.section_how h3 {
+.nado h3 {
   margin-bottom: 20px;
 }
-.section_how h4 {
+.nado h4 {
   font-weight: 400;
 }
 .gallery {
-  display: grid;
   gap: 10px;
 }
-.gallery_title {
+.gallery h3 {
   margin-bottom: 0;
 }
 .gallery_list {
@@ -193,7 +193,7 @@
     right: 20px;
     top: -7px;
   }
-  .header_title {
+  .main_title {
     margin-left: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     text-shadow: 4px 4px var(--color-shadow-second, #FF0070);
@@ -207,13 +207,11 @@
     gap: 80px;
     padding: 50px 25px 0px 22px;
   }
-  .section_why, 
-  .section_how {
+  .section_flex {
     display: flex;
     gap: 20px;
   }
-  .section_why_title,
-  .section_how_title {
+  .section_flex h2 {
     min-width: 236px;
   }
   .section_what_title {
@@ -259,15 +257,14 @@
     align-items: start;
     gap: 11px;
   }
-  .header_title {
+  .main_title {
     text-shadow: 4px 4px var(--color-shadow-second, #FF0070);
     font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .header_text {
     min-width: 491px;
   }
-  .section_why_title,
-  .section_how_title {
+  .section_flex h2 {
     min-width: 315px;
   }
   .section_what_title {
