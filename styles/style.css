@@ -124,7 +124,10 @@
 }
 .text_decor {
   color: var(--color-text, #F1B2CE);
-  font-size:18px;
+  font-size: 18px;
+}
+.list_item p + p {
+  margin-top: 10px;
 }
 .nado h3 {
   margin-bottom: 20px;
